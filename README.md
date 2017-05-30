@@ -15,19 +15,35 @@
 
 1. 将 libXSSDK-release.aar 添加(拖放)到你的工程目录下lib中。
 <img src="https://github.com/xiaoshouhudong/Android-SDKDemo/blob/master/Snapshots/Framework.png"><br/>
-3. 在对应项目Targets下找到General。<br/>
-   在Deployment Info下支持Device Orientation支持Portrail、Landscape Left、Landscape Right 3个方向。否则用户中心。游戏需自行限制横屏还是竖屏。<br/>
-   并且在Embedded Binaries和Linked Frameworks and Libraries链接 frameworks:
-<img src="https://github.com/xiaoshouhudong/iOSSDKDemo/blob/master/Snapshots/FrameworkLink.png"><br/>
+2. 在对应项目下找到build.gradle添加以下库。<br/>
+   
+```java
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
-5. 导入 `com.xshd.sdk`。
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile(name: 'libXSSDK-release', ext:'aar')
+}
+```
+
+
+3. 导入 `com.xshd.sdk`。
 ```
 import com.xshd.sdk.XSSDK;
 import com.xshd.sdk.models.biz.output.XSOrder;
 import com.xshd.sdk.models.biz.output.XSRole;
 import com.xshd.sdk.models.biz.output.XSUser;
 ```
-5. 初始化SDK。并更改对应的参数
+4. 初始化SDK。并更改对应的参数
 
 #### 初始化SDK
 
