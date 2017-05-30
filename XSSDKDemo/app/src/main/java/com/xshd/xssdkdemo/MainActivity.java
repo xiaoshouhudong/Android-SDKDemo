@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         Date curDate =  new Date(System.currentTimeMillis());
                         String timeStr = formatter.format(curDate);
 
-                        //上报角色信息
+                        //登陆成功后上报角色信息
                         XSRole role = new XSRole();
                         role.setRoleId("9527");
                         role.setRoleName("凯特琳");
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 orderModel.setAmount(1);
                 orderModel.setRoleId("9527");
                 orderModel.setRoleName("GG20思密达");
+                orderModel.setProductId("ProductId1");
                 orderModel.setProductName("拉克丝小姐姐");
                 orderModel.setProductDescription("真是一个深思熟虑的选择");
                 orderModel.setOrderId(getOrderStringByTime());

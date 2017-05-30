@@ -94,6 +94,7 @@ orderModel.setServerName("紫陌红尘");
 orderModel.setAmount(1);
 orderModel.setRoleId("9527");
 orderModel.setRoleName("GG20思密达");
+orderModel.setProductId("ProductId1");
 orderModel.setProductName("拉克丝小姐姐");
 orderModel.setProductDescription("真是一个深思熟虑的选择");
 orderModel.setOrderId(getOrderStringByTime());
