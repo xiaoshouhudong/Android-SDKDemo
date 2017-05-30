@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         Date curDate =  new Date(System.currentTimeMillis());
                         String timeStr = formatter.format(curDate);
 
+                        //上报角色信息
                         XSRole role = new XSRole();
                         role.setRoleId("9527");
                         role.setRoleName("凯特琳");
@@ -69,14 +70,12 @@ public class MainActivity extends AppCompatActivity {
                         role.setRoleLevel(1);
                         role.setLoginTime(timeStr);
                         XSSDK.getInstance().xsSaveRole(role);
-
                     }
 
                     @Override
                     public void loginFail(String errorString) {
                         Log.e("XSSDKDemo", "登陆失败" + errorString);
                     }
-
                 });
             }
         });
