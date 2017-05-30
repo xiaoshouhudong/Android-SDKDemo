@@ -43,7 +43,17 @@ import com.xshd.sdk.models.biz.output.XSOrder;
 import com.xshd.sdk.models.biz.output.XSRole;
 import com.xshd.sdk.models.biz.output.XSUser;
 ```
-4. 初始化SDK。并更改对应的参数
+
+4. 在AndroidManifest.xml添加以下权限
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+5. 初始化SDK。并更改对应的参数
 
 #### 初始化SDK
 
