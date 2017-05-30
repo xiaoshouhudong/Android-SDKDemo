@@ -1,5 +1,5 @@
 # 小手Android SDK客户端说明文档
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/xiaoshouhudong/Android-SDKDemo/blob/master/LICENSE)&nbsp;
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/xiaoshouhudong/Android-SDKDemo/master/LICENSE)&nbsp;
 
 
 
