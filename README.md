@@ -1,6 +1,6 @@
 # 小手Android SDK客户端说明文档
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/seven/XSSDKDemo/master/LICENSE)&nbsp;
-[![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/xiaoshouhudong/Android-SDKDemo/blob/master/LICENSE)&nbsp;
+
 
 
 演示项目
@@ -12,25 +12,27 @@
 ==============
 
 
-1. 下载 XSSDKDemo 文件夹内的所有内容。<br/>
-<img src="https://github.com/xiaoshouhudong/iOSSDKDemo/blob/master/Snapshots/FrameworkPath.png"><br/>
-2. 将 Frameworks 内的XSSDK.framework和XSSDK.xcassets添加(拖放)到你的工程目录中。
-<img src="https://github.com/xiaoshouhudong/iOSSDKDemo/blob/master/Snapshots/Framework.png"><br/>
+
+1. 将 libXSSDK-release.aar 添加(拖放)到你的工程目录下lib中。
+<img src="https://github.com/xiaoshouhudong/Android-SDKDemo/blob/master/Snapshots/Framework.png"><br/>
 3. 在对应项目Targets下找到General。<br/>
    在Deployment Info下支持Device Orientation支持Portrail、Landscape Left、Landscape Right 3个方向。否则用户中心。游戏需自行限制横屏还是竖屏。<br/>
    并且在Embedded Binaries和Linked Frameworks and Libraries链接 frameworks:
 <img src="https://github.com/xiaoshouhudong/iOSSDKDemo/blob/master/Snapshots/FrameworkLink.png"><br/>
 
-5. 导入 `<XSSDK/XSSDK.h>`。
+5. 导入 `com.xshd.sdk`。
 ```
-#import <XSSDK/XSSDK.h>
+import com.xshd.sdk.XSSDK;
+import com.xshd.sdk.models.biz.output.XSOrder;
+import com.xshd.sdk.models.biz.output.XSRole;
+import com.xshd.sdk.models.biz.output.XSUser;
 ```
 5. 初始化SDK。并更改对应的参数
 
 #### 初始化SDK
 
 ```java
-    XSSDK.getInstance().xsInit(MainActivity.this, "1", "8ccde908dd33ae301d26a65847505f70");
+XSSDK.getInstance().xsInit(MainActivity.this, "1", "8ccde908dd33ae301d26a65847505f70");
 ```
 
 #### 登陆方法
